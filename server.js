@@ -1,12 +1,12 @@
 
-//Higitasd
+//Hi
 const express = require('express');
 const fs = require('fs');
 const nodemailer = require('nodemailer');
 const { getMaxListeners } = require('process');
 
 const app = express();
-const port = 80;
+const PORT = process.env.PORT || 80;
 const hostName = '0.0.0.0';
 
 app.use(express.static(__dirname + '/public'));
@@ -60,4 +60,4 @@ app.post('/contact', (req,res) => {
         }
     })
 });
-app.listen(port, hostName, () => console.info('Server running at ' + hostName+ ': ' + port +'...'))
+app.listen(PORT, hostName, () => console.info('Server running at ' + hostName+ ': ' + PORT +'...'))
