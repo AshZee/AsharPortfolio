@@ -1,0 +1,268 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    user-select: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+html{
+    background-color: white;
+}
+body{
+    background-image: url(../images/background2.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    width: 100vw;
+    z-index: 10;
+    display: block;
+    transition: all 250ms ease;
+}
+nav{
+    width: 90%;
+    height: 7vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul, nav div{
+    display: flex;
+    flex: 1;
+}
+nav ul{
+    list-style: none;
+    justify-content: space-around;
+}
+nav ul li{
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: rgb(45,17,42);
+    /* border: 1px rgba(3,39,91,1) dotted; */
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all ease 0.1s;
+}
+nav .change:hover{
+    background-color: rgb(235,200,180);
+}
+nav .contact{
+    background: radial-gradient(closest-side, rgba(200,41,61, 0.8), transparent)
+}
+.form{
+    position: relative;
+    /* border: 3px blue solid; */
+    width: 50%;
+    height: 72%;
+    backdrop-filter: blur(10px);
+    top: calc(51%);
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* mix-blend-mode: hard-light; */
+    background-color: rgba(150,150,150,0.5);
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    opacity: 0;
+}
+form input, form textarea{
+    border: none;
+    border-bottom: 2px black solid;
+    background: transparent;
+    width: 90%;
+    margin-top: 2rem;
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: black;
+    resize: none;
+}
+.name{
+margin-top: 3rem;
+}
+form input::placeholder, form textarea::placeholder{
+    color: rgb(80,80,80);
+    opacity: 1;
+}
+form input{
+    height: 2rem;
+}
+.submit{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    border: 2px black solid;
+    border-radius: 10px;
+    width: fit-content;
+    text-align: center;
+    height: fit-content;
+    margin: auto auto;
+    padding: 1rem;
+    top: 111%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(150,150,150,0.5);
+    transition: all 0.25s ease;
+}
+.submit:hover{
+    background-color: rgba(180,180,180,0.5);
+    cursor: pointer;
+    transform: translate(-50%,-50%) scale(1.1);
+}
+.smContainer{
+    position: absolute;
+    top: 11%;
+    height: 60px;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.igIcon{
+    height: 50px;
+    width: fit-content;
+    border-radius: 15px;
+    background-color: transparent;
+    /* background: rgba(150,150,150, 0.7); */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    transition: all 0.25s ease;
+}
+.igIcon svg{
+    margin-left: 3px;
+    margin-right: 3px;
+    height: calc(100% - 6px);
+    object-fit: contain;
+    display: block;
+    fill: rgb(126,0,48);
+    transition: all 0.25s ease;
+}
+.igInfo{
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 10px;
+    /* width: 150px; */
+    width: 0px;
+    height: 75%;
+    background: rgb(146,20,68);
+    /* margin-right: 5px; */
+    margin-right: 0px;
+    color: rgb(255,220,200);
+    font-family: 'Lora';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    font-size: 1.1rem;
+}
+.igInfo p{
+    transition: all 0s ease;
+    white-space: nowrap;
+}
+.inIcon{
+    height: 50px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    transition: all 0.25s ease;
+    justify-content: start;
+    background: transparent;
+    border-radius: 10px;
+}
+.inIcon svg{
+    height: 95%;
+    object-fit: contain;
+    display: block;
+    fill: rgb(126,0,48);
+    margin: 3px;
+    margin-right:1px;
+    /* border: 3px red solid; */
+}
+.inInfo{
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 10px;
+    /* width: 150px; */
+    width: 0px;
+    height: 75%;
+    background: rgb(146,20,68);
+    /* margin-right: 5px; */
+    margin-right: 0px;
+    color: rgb(255,220,200);
+    font-family: 'Lora';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    font-size: 1.1rem;
+    overflow: hidden;
+}
+.inInfo p{
+    overflow: hidden;
+    white-space: nowrap;
+}
+.mailIcon{
+    /* background-color: rgb(225,190,170); */
+    border-radius: 10px;
+    height: 50px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+.mailIcon svg{
+    height: 100%;
+    margin: 0px 3px;
+    object-fit: contain;
+    display: block;
+    fill: rgb(126,0,48);
+    transition: all 0.25s ease;
+}
+.mailInfo{
+    /* width: 240px; */
+    width: 0px;
+    height: 75%;
+    border-radius: 10px;
+    background: rgb(146,20,68);
+    font-family: 'Lora';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: rgb(255,220,200);
+    transition: all 0.25s ease;
+    /* margin-right: 5px; */
+    margin-right: 0;
+}
+.mailInfo p{
+    overflow: hidden;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+@font-face {
+    font-family: Lora;
+    src: url(fonts/Lora-Regular.ttf);
+}
+@font-face {
+    font-family: Alegreya Sans SC;
+    src: url(fonts/AlegreyaSansSC-Regular.ttf);
+}

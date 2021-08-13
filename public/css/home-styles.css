@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    user-select: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-image: url(../images/homepage.jpg);
+    background-size: cover;
+}
+header{
+    position: sticky;
+    top:0;
+    left: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+nav{
+    width: 90%;
+    height: 7vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul, nav h1{
+    display: flex;
+    flex: 1;
+}
+nav ul{
+    list-style: none;
+    justify-content: space-around;
+}
+nav ul li{
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: rgb(226,192,190);
+    /* border: 1px rgba(3,39,91,1) dotted; */
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+.home{
+    color: white;
+    background: radial-gradient(closest-side, rgba(226,192,190,0.5), transparent 90%);
+}
+nav h1{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: rgb(226,192,190);
+    pointer-events: all;
+    transition: all 1s ease;
+}
+.nameContainer{
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    /* border: 3px red solid; */
+    width: fit-content;
+    height: fit-content;
+    color: rgb(226,192,190);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
+.name{
+    /* border: 3px yellow solid; */
+    font-family: 'opensans-bold', sans-serif;
+    font-weight: bolder;
+    font-size: 6rem;
+    width: inherit;
+    flex-grow: 1;
+    text-shadow: -4px 2px 5px rgba(0,0,0,0.5);
+}
+/* .titles{
+    border: 3px green solid;
+    font: Alegreya Sans SC;
+    font-size: 1.1em;
+} */
+.titles ul{
+    /* border: 3px pink solid; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.titles ul li{
+    color: rgb(226,192,190);
+    font-size: 1.1em;
+    list-style: none;
+    font-family: 'Lora', serif;
+}
+.aboutBtn{
+    display: hidden;
+    opacity: 0;
+    border-radius: 5px;
+    height: fit-content;
+    width: fit-content;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: pointer;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    border: 1px rgb(80,80,80) solid;
+    transition: all 0.5s ease;
+}
+.btnContainer{
+    position: absolute;
+    top: 75vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50vh;
+    width: 50vw;
+    border-radius: 50%;
+}
+@font-face {
+    font-family: RobotoBig;
+    src: url(fonts/Roboto-Black.ttf);
+}
+@font-face {
+    font-family: Alegreya Sans SC;
+    src: url(fonts/AlegreyaSansSC-Regular.ttf);
+}
+@font-face {
+    font-family: Lora;
+    src: url(fonts/Lora-Regular.ttf);
+}

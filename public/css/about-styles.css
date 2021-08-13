@@ -1,0 +1,284 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    user-select: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-image: url(../images/wp.jpg);
+    background-size: cover;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    transition: all ease 0.5s;
+}
+::-webkit-scrollbar-track {
+    background: rgb(40,40,40);
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(169,169,169);
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(120,120,120);
+}
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    width: 100vw;
+    z-index: 10;
+    display: block;
+    transition: all 250ms ease;
+}
+.background{
+    background-color: rgb(20,20,20);
+    box-shadow: 0 2px 10px rgba(0,0,0,1);
+}
+nav{
+    width: 90%;
+    height: 7vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul, nav div{
+    display: flex;
+    flex: 1;
+}
+nav ul{
+    list-style: none;
+    justify-content: space-around;
+}
+nav ul li{
+    font-family: 'Alegreya Sans SC';
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: rgba(1,112,168,1);
+    /* border: 1px rgba(3,39,91,1) dotted; */
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all ease 0.1s;
+}
+.bckgrHover{
+    background: rgba(172,226,228,1);
+}
+.black li{
+    color: white;
+    font-weight: normal;
+}
+.black .change:hover{
+    background: rgba(30,30,30,1);
+}
+.blue .change:hover{
+    background: rgba(172,226,228,1);
+}
+.black .about{
+    background: radial-gradient(closest-side, black 50%, transparent 100%);
+}
+.about{
+    background: radial-gradient(closest-side,rgba(22,145,186,0.7), transparent);
+}
+nav div h1{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+    font-family: 'Alegreya Sans SC';
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: rgba(3,39,91,1);
+    transition: all 1s ease;
+}
+.qContainer{
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    height:300px;
+    width: fit-content;
+    transform: translateX(-50%);
+}
+.quote{
+    width: 50vw;
+    height: calc(300px - 2rem);
+    text-align: center;
+    font-family: 'Lora';
+    font-size: 2.4rem;
+    color: rgb(5,38,91);
+    transition: all ease 500ms;
+    cursor: pointer;
+    display: table-cell;
+    vertical-align: middle;
+}
+.radioContainer{
+    height:fit-content;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+.radio{
+    border: 2px rgb(1,112,168) solid;
+    height: 1.2rem;
+    width: 1.2rem;
+    outline-offset: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px 3px rgba(55,170,199,0.7);
+    transition: all 0.25s ease;
+}
+.downIcon {
+    opacity: 0.4;
+    position: absolute;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    transform: scale(3) translateX(-50%);
+    left: 50%;
+    top: 90vh;
+    border-radius: 100px;
+    background: linear-gradient(to right, rgba(5,75,137,1), rgba(22,145,186,1));;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.arrow{
+    content: "";
+    opacity: 1;
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px #C2FAF9 solid;
+    border-right: 2px #C2FAF9 solid;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%)  rotate(45deg);
+}
+.section1{
+    height: 100%;
+    width: 100%;
+}
+.section2{
+    height: 100%;
+    width: 100%;
+    /* border: 3px red solid; */
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgb(15,15,15);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+}
+.blob{
+    position: absolute;
+    top: 7vh;
+    left: 0;
+    height: 125px;
+    width: 125px;
+    backdrop-filter: invert(100%);
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    overflow:hidden;
+    transition: transform 750ms ease, opacity 750ms ease, visibility 750ms ease;
+    z-index: 2;
+}
+.aboutContainer{
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    padding: 2%;
+    padding-left: 5%;
+    height: calc(100% - 7vh);
+    align-items: center;
+    justify-content: space-between;
+    /* border: 3px pink solid; */
+}
+.pseudoSection2{
+    position: absolute;
+    /* border: 3px red solid; */
+    height: 100%;
+    width: inherit;
+    z-index: 2;
+    cursor: none;
+}
+.portrait{
+    opacity: 0;
+    visibility: hidden;
+    height: 100%;
+    width: auto;
+    /* border: 3px red solid; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    transition: all 750ms ease;
+    transform: translateX(-50%);
+    transition: all 0.5s ease;
+}
+.portrait img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    box-shadow: 5px 5px 10px 1px black;
+    /* border: 3px purple solid; */
+    z-index: 3;
+    transition: all 0.5s ease;
+
+}
+.aboutText{
+    opacity: 0;
+    visibility: hidden;
+    /* border: 3px green solid; */
+    height: 90%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    transition: all 1s ease;
+    z-index: 1;
+}
+.aboutText p{
+    /* border: 3px yellow solid; */
+    padding: 0 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    /* font-weight: bold; */
+    /* letter-spacing: 1px; */
+    line-height: 1.65;
+    position: relative;
+    font-size: 0.8rem;
+}
+@media screen and (min-width: 1500px) {
+    .aboutText p {
+    font-size: 1.2rem;
+    }
+  }
+@font-face {
+    font-family: Alegreya Sans SC;
+    src: url(fonts/AlegreyaSansSC-Regular.ttf);
+}
+@font-face {
+    font-family: Lora;
+    src: url(fonts/Lora-Regular.ttf);
+}
