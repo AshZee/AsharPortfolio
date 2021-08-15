@@ -40,7 +40,7 @@ app.post('/contact', (req,res) => {
         service: 'gmail',
         auth: {
             user: 'ashzee10000@gmail.com',
-            pass: 'ash23579'
+            pass: 'vbpavaqfjkfmkugm'
         }
     })
     const mailOptions = {
