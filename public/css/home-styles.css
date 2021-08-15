@@ -155,14 +155,17 @@ nav h1{
         font-size: 0.6rem;
     }
     .aboutBtn{
-        padding: 3px 10px;
+        padding: 5px 10px;
         font-size: 1rem;
         background-color: transparent;
         color: rgb(226,192,190);
 }
     .btnContainer{
+        border-radius: unset;
         top: 60vh;
-        height: 10vh;
+        height: 50vh;
+        width: 50vw;
+        border: 3px red solid;
     }
 }
 @font-face {
