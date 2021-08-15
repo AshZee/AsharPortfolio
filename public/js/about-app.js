@@ -3,7 +3,7 @@ function getRandomInt(max) {
 }
 function clearRadios(){
     radios.forEach(radio => {
-        radio.style.backgroundColor = "rgb(194,250,249)";
+        radio.style.backgroundColor = "transparent";
     });
 }
 function cumulativeOffset(element){
@@ -131,7 +131,7 @@ downIcon.addEventListener("click", () => {
 
 const options = {
     root: null,
-    threshold: 0.90
+    threshold: 0.30
 };
 const observer = new IntersectionObserver((entries, observer) =>{
     entries.forEach(entry =>{
@@ -147,17 +147,19 @@ const observer = new IntersectionObserver((entries, observer) =>{
             list.classList.add("blue");
             header.style.opacity = "1";
             header.style.visibility = "visible";
-            
+            header.style.background = "rgb(192,246,248)";
         }
         else if (sectionOneInt == false && sectionTwoInt == false || sectionOneInt == true && sectionTwoInt == true){
             header.style.opacity = "0";
             header.style.visibility = "hidden";
-            header.classList.remove("background");
+            // header.classList.remove("background");
+            header.style.background = "transparent";
         }
         else if (sectionTwoInt == true && sectionOneInt == false){
+            header.style.background = "rgb(20,20,20)";
             list.classList.remove("blue");
             list.classList.add("black");
-            header.classList.add("background");
+            // header.classList.add("background");
             header.style.opacity = "1";
             header.style.visibility = "visible";
             portrait.style.visibility = "visible";

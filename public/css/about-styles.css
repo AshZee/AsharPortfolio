@@ -108,6 +108,7 @@ nav div h1{
     height:300px;
     width: fit-content;
     transform: translateX(-50%);
+    /* border: 3px solid red; */
 }
 .quote{
     width: 50vw;
@@ -120,6 +121,7 @@ nav div h1{
     cursor: pointer;
     display: table-cell;
     vertical-align: middle;
+    /* border: 3px solid pink; */
 }
 .radioContainer{
     height:fit-content;
@@ -130,6 +132,7 @@ nav div h1{
     transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
+    /* border: 3px solid yellow; */
 }
 .radio{
     border: 2px rgb(1,112,168) solid;
@@ -147,8 +150,8 @@ nav div h1{
     display: inline-block;
     width: 22px;
     height: 22px;
-    transform: scale(3) translateX(-50%);
     left: 50%;
+    transform:translateX(-50%) scale(3);
     top: 90vh;
     border-radius: 100px;
     background: linear-gradient(to right, rgba(5,75,137,1), rgba(22,145,186,1));;
@@ -156,7 +159,6 @@ nav div h1{
     cursor: pointer;
 }
 .arrow{
-    content: "";
     opacity: 1;
     display: block;
     box-sizing: border-box;
@@ -268,6 +270,48 @@ nav div h1{
     line-height: 1.65;
     position: relative;
     font-size: 0.8rem;
+}
+@media (max-width: 500px) {
+    nav{
+        width: 100%;
+    }
+    nav ul li{
+        font-size: 1rem;
+        padding: 5px;
+    }
+    .qContainer{
+        top: 15vh;
+    }
+    .quote{
+        width: 100vw;
+        font-size: 1.4rem;
+        height: 25vh;
+    }
+    .radioContainer{
+        width: 80%;
+        bottom: 10%
+    }
+    .radio{
+        background-color: transparent;
+    }
+    .downIcon{
+        top: 90%;
+        left: 50%;
+    }
+    .section2{
+        height: 200%;
+    }
+    .blob{
+        display: none;
+    }
+    .aboutContainer{
+        padding: 2%;
+        flex-direction: column;
+        height: 100%;
+    }
+    .aboutText p{
+        padding: 10px;
+    }
 }
 @media screen and (min-width: 1500px) {
     .aboutText p {

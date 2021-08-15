@@ -78,7 +78,6 @@ nav h1{
     text-align: center;
     display: flex;
     flex-direction: column;
-
 }
 .name{
     /* border: 3px yellow solid; */
@@ -126,6 +125,10 @@ nav h1{
     font-size: 20px;
     border: 1px rgb(80,80,80) solid;
     transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 3px pink solid; */
 }
 .btnContainer{
     position: absolute;
@@ -135,6 +138,32 @@ nav h1{
     height: 50vh;
     width: 50vw;
     border-radius: 50%;
+    /* border: 3px red solid; */
+}
+@media (max-width: 500px) {
+    nav{
+        width: 100%;
+    }
+    nav ul li{
+        font-size: 1rem;
+        padding: 5px;
+    }
+    .name{
+        font-size: 3.5rem;
+    }
+    .titles ul li{
+        font-size: 0.6rem;
+    }
+    .aboutBtn{
+        padding: 3px 10px;
+        font-size: 1rem;
+        background-color: transparent;
+        color: rgb(226,192,190);
+}
+    .btnContainer{
+        top: 60vh;
+        height: 10vh;
+    }
 }
 @font-face {
     font-family: RobotoBig;

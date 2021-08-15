@@ -42,5 +42,5 @@ tl.from(".name", {y: 100, duration: 1, ease: "bounce"}, "<25%");
 tl.from(".name", {opacity: 0, duration: 1}, "<");
 // tl.from(".titles ul", {y: 100, duration:1, ease: "bounce"}, "<25%");
 tl.from(".titles ul li", {opacity: 0, duration: 1, stagger: 0.2}, "<75%");
-tl.to(".aboutBtn", {opacity: 1, duration: 1}, "<25%");
-tl.to(".aboutBtn", {display: "block", duration: 0}, "<0%");
+tl.to(".aboutBtn", {opacity: 0.8, duration: 1}, "<%");
+tl.to(".aboutBtn", {display: "flex", duration: 0}, "<0%");
