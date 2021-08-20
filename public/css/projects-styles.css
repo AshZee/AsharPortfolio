@@ -156,6 +156,11 @@ iteration-count | direction | fill-mode | play-state | name */
     width: 100%;
     font-size: 1.2rem;
 }
+section{
+    opacity: 0;
+    transition: all 1.5s ease;
+    transform: translateX(-500px);
+}
 .heading1{
     /* border: 3px brown solid; */
     margin-top: 50px;
@@ -177,6 +182,8 @@ iteration-count | direction | fill-mode | play-state | name */
 .body1 > p{
     /* border: 3px red solid; */
     padding-left: 10px;
+    padding-top: 10px;
+    line-height: 2rem; 
 }
 .websiteLogo{
     position: relative;
@@ -185,6 +192,7 @@ iteration-count | direction | fill-mode | play-state | name */
     /* border: 3px red solid; */
     background-image: radial-gradient(rgb(150,150,150) 1px, rgb(38,38,38) 1px);
     background-size: 20px 20px;
+    mix-blend-mode: exclusion;
 }
 .websiteLogo p{
     /* border: 3px yellow solid; */
