@@ -159,7 +159,7 @@ iteration-count | direction | fill-mode | play-state | name */
 section{
     opacity: 0;
     transition: all 1.5s ease;
-    transform: translateX(-500px);
+    /* transform: translateX(-500px); */
 }
 .heading1{
     /* border: 3px brown solid; */
@@ -208,7 +208,7 @@ section{
 }
 .websiteLogo svg{
     opacity: 0;
-    height: 150px;
+    /* height: 150px; */
     height: 100%;
     position: absolute;
     top: 50%;
@@ -216,7 +216,7 @@ section{
     /* border: 3px pink solid;   */
     transition: opacity 500ms ease;
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
     nav{
         width: 100%;
     }
@@ -226,6 +226,23 @@ section{
     }
     .personalProjects{
         font-size: 1.5rem;
+    }
+    .heading1{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    .websiteLogo{
+        height: 100px;
+    }
+    .websiteLogo p{
+        font-size: 2.5rem;
+    }
+    .wesbsiteLogo svg{
+        height: 3rem;
+    }
+    .body1 > p{
+        font-size: 1rem;
+        line-height: 1.2rem;
     }
 }
 @keyframes typing {

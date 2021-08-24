@@ -267,9 +267,9 @@ nav div h1{
     color: white;
     /* font-weight: bold; */
     /* letter-spacing: 1px; */
-    line-height: 1.65;
+    line-height: 1.2;
     position: relative;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 @media (max-width: 500px) {
     nav{
@@ -313,11 +313,11 @@ nav div h1{
         padding: 10px;
     }
 }
-@media screen and (min-width: 1500px) {
+/* @media screen and (min-width: 1500px) {
     .aboutText p {
     font-size: 1.2rem;
     }
-  }
+  } */
 @font-face {
     font-family: Alegreya Sans SC;
     src: url(fonts/AlegreyaSansSC-Regular.ttf);

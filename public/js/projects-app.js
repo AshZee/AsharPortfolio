@@ -24,7 +24,7 @@ window[value1 + '2'] = 29;
 console.log(452);
 const options = {
     root: null,
-    threshold: 0.25
+    threshold: 0.1
 }
 function logoAnimation(){
     for(let i = 0; i < logoP.length; i++){
@@ -53,7 +53,7 @@ function logoAnimation(){
 
 const observer = new IntersectionObserver((entries, observer) =>{
     entries.forEach(entry => {
-        entry.isIntersecting ? personalProjects.style.opacity = "0" : personalProjects.style.opacity = "1";
+        // entry.isIntersecting ? personalProjects.style.opacity = "0" : personalProjects.style.opacity = "1";
         if(entry.isIntersecting){
             console.log(entry.target.className);
             console.log("intersection");
