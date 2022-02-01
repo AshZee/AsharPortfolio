@@ -199,8 +199,10 @@ nav div h1{
     backdrop-filter: invert(100%);
     border-radius: 50%;
     transform: translate(-50%,-50%);
-    overflow:hidden;
-    transition: transform 750ms ease, opacity 750ms ease, visibility 750ms ease;
+    overflow: hidden;
+    opacity: 0;
+    
+    /* transition: transform 750ms linear, opacity 750ms linear, visibility 750ms linear; */
     z-index: 2;
 }
 .aboutContainer{

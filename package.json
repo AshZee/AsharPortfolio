@@ -8,7 +8,7 @@
     "nodemailer": "^6.6.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.15"
   },
   "scripts": {
     "dev": "nodemon server.js",

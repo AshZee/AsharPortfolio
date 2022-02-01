@@ -190,19 +190,25 @@ section1.addEventListener('mouseover',function(){
     blob.style.transform = "translate(-50%, -50%) scale(0)"
     
 });
-pseudoSection2.addEventListener('mouseover',function(){
+section1.addEventListener('onmouseout',function(){
     blob.style.opacity = "1";
     blob.style.visibility = "visible";
     blob.style.transform = "translate(-50%, -50%) scale(1)";
+    
 });
 portrait.addEventListener('mouseover',function(){
     blob.style.opacity = "0";
     blob.style.visibility = "hidden";
     blob.style.transform = "translate(-50%, -50%) scale(0)";
 });
+portrait.addEventListener('onmouseout',function(){
+    blob.style.opacity = "1";
+    blob.style.visibility = "visible";
+    blob.style.transform = "translate(-50%, -50%) scale(1)";
+});
 body.onscroll = function(element){  
-    blob.style.opacity = "0";
-    blob.style.visibility = "hidden";
+    // blob.style.opacity = "0";
+    // blob.style.visibility = "hidden";
 }
 
 setInterval(function(){

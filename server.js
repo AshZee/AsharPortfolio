@@ -60,4 +60,4 @@ app.post('/contact', (req,res) => {
         }
     })
 });
-app.listen(PORT, hostName, () => console.info('Server running at ' + hostName+ ': ' + PORT +'...'))
+app.listen(PORT, hostName, () => console.info('Server running at ' + hostName+ ': ' + PORT +'...'));

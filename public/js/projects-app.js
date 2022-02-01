@@ -7,6 +7,12 @@ const Alvany = document.querySelector(".Alvany");
 const fountainPen = document.querySelector(".websiteLogo svg");
 const sections = document.querySelectorAll("section");
 const section1 = document.querySelector(".section1");
+const test = document.querySelector(".testCircle");
+
+
+var tl = gsap.timeline();
+tl.from("nav", {opacity: 0, duration: 1});
+tl.from(".sunSet > img", {opacity: 0, duration: 10}, "<50%");
 
 const logoP = "ASHARALVANY";
 const space = "&nbsp;";
@@ -24,7 +30,7 @@ window[value1 + '2'] = 29;
 console.log(452);
 const options = {
     root: null,
-    threshold: 0.1
+    threshold: 0.2
 }
 function logoAnimation(){
     for(let i = 0; i < logoP.length; i++){
@@ -32,23 +38,24 @@ function logoAnimation(){
             setTimeout(() =>{
                 buff2 = buff2 + logoP[i];
                 Ashar.innerHTML = buff2;
-            }, 500 * i)
+            }, 500 * i) //500
         }
         else if (i >= 5){
             setTimeout(() =>{
                 buff4 = buff4 + logoP[i];
                 Alvany.innerHTML = buff4;
-            }, 500 * i)
+            }, 500 * i) //500
             buff3 = i;
         }
     }
-
+    
     setTimeout(() =>{
         rect = Ashar.getBoundingClientRect();
         rect1 = Alvany.getBoundingClientRect();
-        fountainPen.style.left = ((Math.abs(rect.right - rect1.left)/2) + rect.left + Ashar.offsetWidth)+ "px";
+        fountainPen.style.left = ((Math.abs(rect1.left - rect.right)/2) + rect.right) + "px";
+        test.style.left = ((Math.abs(rect1.left - rect.right)/2) + rect.right) + "px";
         fountainPen.style.opacity = "1";
-    }, 500 * buff3);
+    }, 500 * buff3); //500
 }   
 
 const observer = new IntersectionObserver((entries, observer) =>{
@@ -60,11 +67,10 @@ const observer = new IntersectionObserver((entries, observer) =>{
             observerOverride = false;
             personalProjects.style.opacity = "0";
             eval(entry.target.className).style.opacity = "1";
-            eval(entry.target.className).style.transform = "none";
             // console.log(toString(eval(entry.target.className).style.class = "1"));
             if (!logoChanged){
-            logoAnimation();
-            logoChanged = true;
+                logoAnimation();
+                logoChanged = true;
             }
         }
         else{
@@ -77,24 +83,22 @@ const observer = new IntersectionObserver((entries, observer) =>{
         }
     });
 }, options);
-sections.forEach((section) =>{
-observer.observe(section);
-});
+observer.observe(scrollable)
 // window.addEventListener("scroll", () =>{
-//     let currentPos = window.pageYOffset;
-//     if(lastPos < currentPos && scrollFlag == false){
-//         header.style.opacity = "0";
-//         header.style.visbility = "hidden";
-//         scrollFlag = true;
-//         // console.log(scrollFlag + ' ' + (lastPos - currentPos));
-//     }
-//     else if(lastPos > currentPos && scrollFlag == true){
-//         header.style.opacity = "1";
-//         header.style.visbility = "visible";
-//         scrollFlag = false;
-//         // console.log(scrollFlag + ' ' + (lastPos - currentPos));  
-//     }
-//     lastPos = currentPos;
+    //     let currentPos = window.pageYOffset;
+    //     if(lastPos < currentPos && scrollFlag == false){
+        //         header.style.opacity = "0";
+        //         header.style.visbility = "hidden";
+        //         scrollFlag = true;
+        //         // console.log(scrollFlag + ' ' + (lastPos - currentPos));
+        //     }
+        //     else if(lastPos > currentPos && scrollFlag == true){
+            //         header.style.opacity = "1";
+            //         header.style.visbility = "visible";
+            //         scrollFlag = false;
+            //         // console.log(scrollFlag + ' ' + (lastPos - currentPos));  
+            //     }
+            //     lastPos = currentPos;
 // });
 window.addEventListener("scroll", Scroll, false);
 function Scroll(){
