@@ -201,7 +201,7 @@ section{
     /* border: 3px yellow solid; */
     position: absolute;
     font-size: 5rem;
-    font-family: "Barlow Condensed";
+    font-family: 'Fira Code', monospace;
     text-align: center;
     top: 50%;
     left: 50%;
@@ -210,11 +210,12 @@ section{
     white-space: nowrap;
 }
 .Ashar{
-    /* border: 3px red solid; */
+    font-family: "Barlow Condensed";
 }
 .Alvany{
-    /* border: 3px blue solid; */
+    font-family: "Barlow Condensed";
 }
+
 .websiteLogo svg{
     opacity: 0;
     /* height: 150px; */
